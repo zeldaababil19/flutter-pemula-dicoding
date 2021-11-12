@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
 import 'package:sub_pemula_movie/detail_screen.dart';
 import 'package:sub_pemula_movie/list_screen.dart';
 import 'package:sub_pemula_movie/model/film.dart';
@@ -276,22 +276,26 @@ class _MainScreenState extends State<MainScreen> {
                                                         color: Colors.grey.withOpacity(0.3),
                                                       ),
                                                     ),
-                                                    Container(
+                                                    Flexible(
+                                                      child: Container(
                                                         margin: EdgeInsets.only(left: 6.0, right: 6.0, bottom: 12.0, top: 12.0),
                                                         padding: EdgeInsets.all(12),
                                                         child: Text(item.genre, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: Colors.white)),
                                                         decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(10),
                                                           color: Colors.grey.withOpacity(0.3),
-                                                        )),
+                                                        ),
+                                                      ),
+                                                    ),
                                                     Container(
-                                                        margin: EdgeInsets.only(left: 6.0, bottom: 12.0, top: 12.0),
-                                                        padding: EdgeInsets.all(12),
-                                                        child: Text('⭐ ${item.skor}', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: Colors.white)),
-                                                        decoration: BoxDecoration(
-                                                          borderRadius: BorderRadius.circular(10),
-                                                          color: Colors.grey.withOpacity(0.3),
-                                                        )),
+                                                      margin: EdgeInsets.only(left: 6.0, bottom: 12.0, top: 12.0),
+                                                      padding: EdgeInsets.all(12),
+                                                      child: Text('⭐ ${item.skor}', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: Colors.white)),
+                                                      decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(10),
+                                                        color: Colors.grey.withOpacity(0.3),
+                                                      ),
+                                                    ),
                                                   ],
                                                 ),
                                               ],
